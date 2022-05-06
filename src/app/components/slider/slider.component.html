@@ -1,28 +1,29 @@
+<pre>{{items|json}}</pre>
+
 <div class="slider">
-    <div class="slide">
+    <div class="slide" *ngFor="let item of items">
         <div class="slide-bg">
-            <img class="slide-bg-image" src="https://image.tmdb.org/t/p/original/2n95p9isIi1LYTscTcGytlI4zYd.jpg" alt="">
+            <img class="slide-bg-image" src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt=" ">
         </div>
-        <div class="slide-pane">
-            <h2 class="name">The Outfit</h2>
-            <div class="meta">
-                <div class="info">
-                    <span class="rating">
-                        <span class="app-icon" >star</span>
-                    <span class="rating-value">
-                            7.5
+        <div class="slide-pane ">
+            <h2 class="name ">{{item.title}}</h2>
+            <div class="meta ">
+                <div class="info ">
+                    <span class="rating ">
+                        <span class="app-icon " >star</span>
+                    <span class="rating-value ">
+                            {{item.vote_average}}
                         </span>
                     <span>
                             /10
                         </span>
                     </span>
                     <span>400 Reviews</span>
-                    <span>2021</span>
+                    <span>{{item.release_date}}}</span>
                 </div>
             </div>
-            <div class="desc mt-5">
-                Leonard is an English tailor who used to craft suits on London’s world-famous Savile Row. After a personal tragedy, he’s ended up in Chicago, operating a small tailor shop in a rough part of town where he makes beautiful clothes for the only people around
-                who can afford them: a family of vicious gangsters.",
+            <div class="desc mt-5 ">
+                {{item.overview}}
             </div>
         </div>
     </div>
