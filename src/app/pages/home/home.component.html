@@ -1,2 +1,6 @@
-<app-slider [items]='movies'></app-slider>
+<app-slider [items]='popularMovies'></app-slider>
+<items-banner title='Upcoming Movies' [items]="popularMovies"></items-banner>
+<items-banner title="Top Rated Movies" [items]="topRatedMovies"></items-banner>
+<items-banner title="Popular Movies" [items]="upcomingMovies"></items-banner>
+
 <!-- <p><pre>{{ movies | json}}</pre> -->

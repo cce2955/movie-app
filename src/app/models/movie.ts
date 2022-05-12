@@ -1,3 +1,5 @@
+
+
 export interface Movie{
     adult: boolean,
     backdrop_path: String,
@@ -13,4 +15,8 @@ export interface Movie{
     video: boolean,
     vote_average: number,
     vote_count: number
+  }
+
+  export interface MovieDto{
+    page:number, results: Movie[], total_results: number, total_pages: number
   }
