@@ -21,7 +21,7 @@ export class MoviesComponent implements OnInit {
   getPagedMovies(page: number){
     this.movieService.searchMovies(page).subscribe(movies=>{
       this.movies = movies;
-    })
+    }) 
   }
   paginate(event: any){
     console.log(event);
